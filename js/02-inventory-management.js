@@ -121,7 +121,8 @@ function fromStorage() {
             }
         }
     }
-    return invStorage;
+    inventory = invStorage;
+    return inventory;
 }
 //fromStorage();
 
@@ -139,12 +140,12 @@ function main() {
                  [111, 'Jeans', 22, 39.99],
                  [444, 'Jackets', 5, 49.99]];
 
+    toStorage();
     displayMenu();
     getSku(inventory);
 
     while (true) {
         command = window.prompt('Enter a command:');
-        toStorage();
 
         if (command !== null) {
             if (command === 'view') {
@@ -168,4 +169,4 @@ function main() {
 main();
 
 
-// Not sure how to use localStorage!
+// still having problem with localStorage
